@@ -13,9 +13,9 @@ ADD ROOT.war /usr/local/tomcat/webapps
 ADD Homework/Tuan1.war /usr/local/tomcat/webapps
 ADD Homework/Tuan2.war /usr/local/tomcat/webapps
 
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
+
 # MOVING THE FILES TO THE HOMEWORK FOLDER
 RUN mv -f /usr/local/tomcat/webapps/Tuan1 /usr/local/tomcat/webapps/Homework
 RUN mv -f /usr/local/tomcat/webapps/Tuan2 /usr/local/tomcat/webapps/Homework
-
-EXPOSE 8080
-CMD ["catalina.sh", "run"]
