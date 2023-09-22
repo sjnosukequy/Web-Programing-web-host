@@ -13,12 +13,12 @@ ADD ROOT.war /usr/local/tomcat/webapps
 ADD Homework/Tuan1.war /usr/local/tomcat/webapps
 ADD Homework/Tuan2.war /usr/local/tomcat/webapps
 
-WORKDIR /usr/local/tomcat/bin
-RUN ls
-
-EXPOSE 8080
-CMD ["catalina.sh", "run"]
+# RUNNING THE SH SO THAT TOMCAT CAN COMPILE THE WAR FILES
+RUN /usr/local/tomcat/bin/catalina.sh
 
 # MOVING THE FILES TO THE HOMEWORK FOLDER
-RUN sleep 60;mv -f /usr/local/tomcat/webapps/Tuan1 /usr/local/tomcat/webapps/Homework
+RUN mv -f /usr/local/tomcat/webapps/Tuan1 /usr/local/tomcat/webapps/Homework
 RUN mv -f /usr/local/tomcat/webapps/Tuan2 /usr/local/tomcat/webapps/Homework
+
+EXPOSE 8080
+# CMD ["catalina.sh", "run"]
