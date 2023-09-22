@@ -4,7 +4,7 @@ RUN rm -rf /usr/local/tomcat/webapps/ROOT
 RUN rm -rf /usr/local/tomcat/webapps/examples
 
 # Create a Homework folder
-RUN mkdir Homework /usr/local/tomcat/webapps
+RUN mkdir -p Homework /usr/local/tomcat/webapps
 
 # Adding the root file
 ADD ROOT.war /usr/local/tomcat/webapps
