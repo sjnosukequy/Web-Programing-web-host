@@ -13,6 +13,9 @@ ADD ROOT.war /usr/local/tomcat/webapps
 ADD Homework/Tuan1.war /usr/local/tomcat/webapps
 ADD Homework/Tuan2.war /usr/local/tomcat/webapps
 
+WORKDIR /usr/local/tomcat/bin
+RUN ls
+
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
 
