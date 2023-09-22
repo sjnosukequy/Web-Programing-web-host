@@ -17,7 +17,7 @@ ADD Homework/Tuan2.war /usr/local/tomcat/webapps
 RUN /usr/local/tomcat/bin/catalina.sh start
 
 # MOVING THE FILES TO THE HOMEWORK FOLDER
-RUN mv -f /usr/local/tomcat/webapps/Tuan1 /usr/local/tomcat/webapps/Homework
+RUN sleep 30;mv -f /usr/local/tomcat/webapps/Tuan1 /usr/local/tomcat/webapps/Homework
 RUN mv -f /usr/local/tomcat/webapps/Tuan2 /usr/local/tomcat/webapps/Homework
 
 EXPOSE 8080
