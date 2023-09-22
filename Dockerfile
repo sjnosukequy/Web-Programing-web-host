@@ -14,6 +14,7 @@ ADD Homework/Tuan1.war /usr/local/tomcat/webapps
 ADD Homework/Tuan2.war /usr/local/tomcat/webapps
 
 # RUNNING THE SH SO THAT TOMCAT CAN COMPILE THE WAR FILES
+RUN chmod +x /usr/local/tomcat/bin/catalina.sh
 RUN /usr/local/tomcat/bin/catalina.sh
 
 # MOVING THE FILES TO THE HOMEWORK FOLDER
