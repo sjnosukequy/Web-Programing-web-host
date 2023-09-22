@@ -17,5 +17,5 @@ EXPOSE 8080
 CMD ["catalina.sh", "run"]
 
 # MOVING THE FILES TO THE HOMEWORK FOLDER
-RUN mv -f /usr/local/tomcat/webapps/Tuan1 /usr/local/tomcat/webapps/Homework
+RUN sleep 60;mv -f /usr/local/tomcat/webapps/Tuan1 /usr/local/tomcat/webapps/Homework
 RUN mv -f /usr/local/tomcat/webapps/Tuan2 /usr/local/tomcat/webapps/Homework
